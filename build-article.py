@@ -273,8 +273,7 @@ TEMPLATE = """<!DOCTYPE html>
         </a>
       </div>
       <div class="footer-text">
-        Joshua Colcord {current_year} &middot; Hosted locally on <a class="footer-link" href="https://blog.jcol.cx/mithrandir"
-          target="_blank" rel="noopener">Mithrandir</a>
+        Joshua Colcord {current_year} &middot; Hosted locally on <a class="footer-link" href="mithrandir.html">Mithrandir</a>
       </div>
     </footer>
   </div>
