@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>joshua colcord</title>
+  <meta name="description" content="joshua colcord's personal website, engineering portfolio">
+  <link rel="stylesheet" href="content/styles.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Sections">
+      <a class="name nav-item active" href="#home" data-section="home">joshua colcord</a>
+      <span class="nav-sep">/</span>
+      <a class="nav-item" href="#writing" data-section="writing">work and writing</a>
+      <span class="nav-sep">/</span>
+      <a class="nav-item" href="https://jcol.cx/colcord-resume.pdf" target="_blank" rel="noopener">resume</a>
+    </nav>
+  </header>
+
+  <div class="page">
+
+    <!-- Home -->
+    <main class="section" id="section-home">
+      <p>
+        Hello! I'm Joshua, a math and computer science student at the University of Wisconsin.
+      </p>
+      <p>
+        I'm an undergraduate researcher at the
+        <a class="lab-link" href="https://research.cs.wisc.edu/adsl/" target="_blank" rel="noopener noreferrer">ADvanced
+          Systems Laboratory (ADSL)</a>, working
+        under John Shawger and Dr. Remzi Arpaci-Dusseau.
+        Currently, I'm developing an inference scheduler that uses Hawkes processes to exploit
+        self-excitement in agent patterns.
+        My work improves GPU memory efficiency and fairness, reduces p99 latency, and is very
+        enjoyable to work on.
+      </p>
+      <p>
+        This summer, I'm also interning at <a class="lab-link" href="https://voyagerai.us" target="_blank"
+          rel="noopener noreferrer">Voyager</a> in Milwaukee, focused on optimizing backend performance.
+        I'm also working on some sweet
+        projects that you can check out in my <a class="lab-link section-link" href="#writing" data-section="writing">writing</a>.
+      </p>
+      <p class="connect-intro">
+        Please feel free to reach out to me at
+        <a class="email-link" href="mailto:jcolcord@wisc.edu">jcolcord [at] wisc.edu</a>!
+        I'm very interested in low-level programming, high performance systems, machine
+        learning, stats, optimization, and much more.
+      </p>
+    </main>
+    
+    <!-- Writing -->
+    <main class="section" id="section-writing" hidden>
+      <ul class="article-list" id="article-list-container" style="min-height: 280px;">
+        <!-- Articles rendered via JSON -->
+      </ul>
+      <div class="pagination" style="display: flex; justify-content: center; gap: 24px; margin-top: 16px;">
+        <button id="prev-page" aria-label="Previous page" style="background:none; border:none; font-family:inherit; font-size:24px; cursor:pointer; color:var(--text); transition: opacity 0.2s;">&larr;</button>
+        <button id="next-page" aria-label="Next page" style="background:none; border:none; font-family:inherit; font-size:24px; cursor:pointer; color:var(--text); transition: opacity 0.2s;">&rarr;</button>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-icons" aria-label="Social links">
+      <a class="icon-link" href="https://github.com/joshcolcord" target="_blank" rel="noopener noreferrer"
+        aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" stroke="#000000" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a class="icon-link" href="https://linkedin.com/in/joshcolcord/" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22 3.47059V20.5294C22 20.9194 21.845 21.2935 21.5692 21.5693C21.2935 21.8451 20.9194 22 20.5294 22H3.47056C3.08053 22 2.70648 21.8451 2.43069 21.5693C2.15491 21.2935 1.99997 20.9194 1.99997 20.5294V3.47059C1.99997 3.08056 2.15491 2.70651 2.43069 2.43073C2.70648 2.15494 3.08053 2 3.47056 2H20.5294C20.9194 2 21.2935 2.15494 21.5692 2.43073C21.845 2.70651 22 3.08056 22 3.47059V3.47059ZM7.88232 9.64706H4.94115V19.0588H7.88232V9.64706ZM8.14703 6.41176C8.14858 6.18929 8.10629 5.96869 8.02258 5.76255C7.93888 5.55642 7.81539 5.36879 7.65916 5.21039C7.50294 5.05198 7.31705 4.92589 7.1121 4.83933C6.90715 4.75277 6.68715 4.70742 6.46468 4.70588H6.41173C5.95931 4.70588 5.52541 4.88561 5.20549 5.20552C4.88558 5.52544 4.70585 5.95934 4.70585 6.41176C4.70585 6.86419 4.88558 7.29809 5.20549 7.61801C5.52541 7.93792 5.95931 8.11765 6.41173 8.11765V8.11765C6.63423 8.12312 6.85562 8.0847 7.06325 8.00458C7.27089 7.92447 7.46071 7.80422 7.62186 7.65072C7.78301 7.49722 7.91234 7.31346 8.00245 7.10996C8.09256 6.90646 8.14169 6.6872 8.14703 6.46471V6.41176ZM19.0588 13.3412C19.0588 10.5118 17.2588 9.41177 15.4706 9.41177C14.8851 9.38245 14.3021 9.50715 13.7798 9.77345C13.2576 10.0397 12.8142 10.4383 12.4941 10.9294H12.4117V9.64706H9.64703V19.0588H12.5882V14.0529C12.5457 13.5403 12.7072 13.0315 13.0376 12.6372C13.368 12.2429 13.8407 11.9949 14.3529 11.9471H14.4647C15.4 11.9471 16.0941 12.5353 16.0941 14.0176V19.0588H19.0353L19.0588 13.3412Z" stroke="#000000" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a class="icon-link" href="mailto:jcolcord@wisc.edu" target="_blank" rel="noopener noreferrer" aria-label="Email">
+        <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="footer-text">
+      joshua colcord 2026 &middot; hosted locally on <a class="footer-link" href="https://blog.jcol.cx/mithrandir"
+        target="_blank" rel="noopener">mithrandir</a>
+    </div>
+  </footer>
+
+  <script src="jwriting_articles.js"></script>
+  <script>
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('.section');
+    const sectionLinks = document.querySelectorAll('.section-link');
+
+    sectionLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = this.dataset.section;
+        const navItem = document.querySelector(`.nav-item[data-section="${target}"]`);
+        if (navItem) navItem.click();
+      });
+    });
+
+    navItems.forEach(item => {
+      item.addEventListener('click', function (e) {
+        // Only handle internal navigation (data-section attribute)
+        if (!this.dataset.section) return;
+
+        e.preventDefault();
+        const target = this.dataset.section;
+
+        if (target === 'home') {
+          history.replaceState(null, null, ' '); // Clear hash for home
+        } else {
+          history.replaceState(null, null, '#' + target);
+        }
+
+        navItems.forEach(n => n.classList.remove('active'));
+        this.classList.add('active');
+
+        sections.forEach(s => {
+          if (s.id === 'section-' + target) {
+            s.removeAttribute('hidden');
+          } else {
+            s.setAttribute('hidden', '');
+          }
+        });
+
+        if (target === 'writing') {
+          document.body.classList.add('writing-active');
+        } else {
+          document.body.classList.remove('writing-active');
+        }
+      });
+    });
+
+    // Check hash on load to open correct section
+    const hash = window.location.hash;
+    if (hash) {
+      const target = hash.substring(1);
+      const navItem = document.querySelector(`.nav-item[data-section="${target}"]`);
+      if (navItem) {
+        navItem.click();
+      }
+    }
+
+    // Writing pagination logic
+    let articles = jwritingArticles;
+    let currentPage = 0;
+    const articlesPerPage = 3;
+
+    const listContainer = document.getElementById('article-list-container');
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+
+    function renderArticles() {
+      listContainer.innerHTML = '';
+      const start = currentPage * articlesPerPage;
+      const end = start + articlesPerPage;
+      const currentArticles = articles.slice(start, end);
+
+      currentArticles.forEach(article => {
+        let githubHtml = '';
+        if (article.github_link) {
+          githubHtml = `
+            <a href="${article.github_link}" target="_blank" class="github-icon-link" aria-label="github project" style="color:inherit; opacity:0.8; transition:opacity 0.2s; display: flex; align-items: center; margin-bottom: 7px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="18" height="18">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" stroke="#000000" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          `;
+        }
+
+        const li = document.createElement('li');
+        li.className = 'article-item';
+        li.style.display = 'flex';
+        li.style.justifyContent = 'space-between';
+        li.style.padding = '18px 0';
+        li.style.alignItems = 'stretch';
+        
+        li.innerHTML = `
+          <div class="article-left" style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; max-width: 80%;">
+            <a class="article-title" href="${article.article_link}" style="font-size: 18px; font-weight: normal; line-height: 1.2;">${article.article_name}</a>
+            <p class="article-description" style="margin: 8px 0 0 0;">${article.description}</p>
+          </div>
+          <div class="article-right" style="display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end;">
+            ${githubHtml}
+            <span class="article-date" style="font-size: 15px; color: var(--muted); line-height: 1.2;">${article.date}</span>
+          </div>
+        `;
+        listContainer.appendChild(li);
+      });
+
+      prevBtn.disabled = currentPage === 0;
+      prevBtn.style.opacity = prevBtn.disabled ? '0.3' : '1';
+      prevBtn.style.cursor = prevBtn.disabled ? 'default' : 'pointer';
+
+      nextBtn.disabled = end >= articles.length;
+      nextBtn.style.opacity = nextBtn.disabled ? '0.3' : '1';
+      nextBtn.style.cursor = nextBtn.disabled ? 'default' : 'pointer';
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 0) {
+        currentPage--;
+        renderArticles();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if ((currentPage + 1) * articlesPerPage < articles.length) {
+        currentPage++;
+        renderArticles();
+      }
+    });
+
+    renderArticles();
+  </script>
+
+</body>
+
+</html>

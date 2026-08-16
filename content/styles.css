@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap");
+
+:root {
+  --background: #f1f0ec;
+  --text: #1d1f23;
+  --accent: #3a3d42;
+  --muted: #8b9095;
+  --line: #c9cdd1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Sorts Mill Goudy", Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Topbar ── */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: calc(40px + 23vh) max(24px, calc((100vw - 620px) / 2)) 12px;
+  background: var(--background);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.nav-sep {
+  font-size: 20px;
+  color: var(--muted);
+  user-select: none;
+}
+
+/* shared style for name + nav items */
+.nav-item {
+  position: relative;
+  font-size: 20px;
+  color: var(--muted);
+  transition: color 0.15s;
+  padding-bottom: 4px;
+}
+
+.nav-item.active {
+  color: var(--text);
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--text);
+}
+
+.nav-item:hover {
+  color: var(--text);
+}
+
+/* ── Page / Content ── */
+
+.page {
+  width: min(100% - 48px, 620px);
+  margin:7vh auto 0;
+  padding: 0 0 80px;
+}
+
+/* ── Sections ── */
+
+.section {
+  text-align: left;
+}
+
+.section p {
+  margin: 0 0 18px;
+}
+
+.section p:first-child {
+  color: var(--text);
+}
+
+/* ── Article list (writing) ── */
+
+.article-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-item {
+  border-top: 1px solid var(--line);
+  padding: 0;
+}
+
+.article-item:first-child {
+  border-top: none;
+}
+
+.article-rule {
+  border: none;
+  border-top: 1px solid var(--muted);
+  margin: 0;
+}
+
+.article-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+}
+
+.article-title {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.article-title:hover {
+  opacity: 0.65;
+}
+
+.article-date {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+  margin-left: 16px;
+}
+
+.lab-link {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  text-decoration-thickness: 1px;
+}
+
+.lab-link:hover,
+.lab-link:focus-visible {
+  opacity: 0.75;
+}
+
+.connect-intro {
+  margin-top: 18px;
+}
+
+.email-link {
+  display: inline-block;
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.email-link:hover,
+.email-link:focus-visible {
+  opacity: 0.7;
+}
+
+/* ── Footer ── */
+
+.site-footer {
+  position: fixed;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0 max(24px, calc((100vw - 620px) / 2));
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer-link {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  text-decoration-thickness: 1px;
+}
+
+.footer-link:hover {
+  color: var(--text);
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  opacity: 1;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  color: var(--text);
+  opacity: 0.65;
+}
+
+.icon-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ── Writing scroll mode ── */
+
+body.writing-active {
+  overflow-y: auto;
+  align-items: flex-start;
+}
+
+body.writing-active .page {
+  margin-top: calc(40px + 24vh + 55px);
+  padding-bottom: calc(24px + 80px);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 32px, 620px);
+    padding: 48px 0 64px;
+  }
+
+  .topbar {
+    padding: 32px 16px 12px;
+  }
+
+  .site-footer {
+    padding: 0 16px;
+  }
+}
